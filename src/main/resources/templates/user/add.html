@@ -30,9 +30,9 @@
 
         <label>
             Verify Password:
-            <input type = 'password' name = 'verify' class="form-group"/>
+            <input type = 'password' th:field="${user.verifyPassword}" class="form-group"/>
         </label>
-        <p th:text="${error}"></p>
+        <p class="error" th:errors="${user.verifyPassword}"></p>
 
         <input type = 'submit' value = 'Sign Up' class="form-group"/>
     </form>
